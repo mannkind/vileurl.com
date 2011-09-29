@@ -1,0 +1,60 @@
+<html>
+<head>
+  <title>VileURL - Violate URLs like they were children...</title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css" media="screen" />
+</head>
+  <body>
+  <div id="wrapper">
+    <div id="header">
+      <h1><a href="http://www.vileurl.com">vileurl.com</a> &raquo; <a href="http://www.urbandictionary.com/define.php?term={{offensive}}" title="Define {{offensive}}">{{offensive}}</a> &laquo;</h1>
+    </div>
+    <div id="content">
+      <form action="create" method="get">
+        <label for="url"><strong>URL:</strong> Enter a url below and click <em>Violate It!</em> to create an offensive link.</label> 
+        <input class="textbox" type="text" maxlength="2000" id="url" name="url" value="" />
+        <div id="ohaisubmitbuttons">
+            <input class="button" type="submit" id="violate" name="violate" value="Violate It!" />&nbsp;&nbsp;
+            <input class="button" type="submit" id="jesusplzkthx" name="jesusplzkthx" value="Get me outta here!" />
+        </div>
+      </form>
+      {% if results %}
+        <br />
+        <div id="results" style="text-align: left; font-family: monospace;">
+          Original: <a href="{{url|escape}}">{{url|escape}}</a> <br />
+          Violated: {{hash|urlize}}
+        </div>
+        <br /><br />
+        <div id="adsense">
+          <script type="text/javascript"><!--
+          google_ad_client = "pub-9607008365937836";
+          /* VileURL */
+          google_ad_slot = "9435436434";
+          google_ad_width = 300;
+          google_ad_height = 250;
+          //-->
+          </script>
+          <script type="text/javascript"
+          src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+          </script>
+        </div>
+      {% endif %}
+    </div>
+    <div id="footer">
+      Copyright &copy; 2010. All Rights Reserved.
+    </div>
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-832300-14']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+      })();
+
+    </script>
+  </div>
+  </body>
+</html>
